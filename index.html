@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Farming Solutions | FarmFlow</title>
     <link rel="shortcut icon" type="images/jpg" href="IMAGES/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
-<!----------Nav Bar------------------------>
 <body>
+    <!----------Nav Bar------------------------>
     <header>
         <nav>
-            <img src="IMAGES/logo.jpg" style="width: 100px; height: 60px;"></img>
+            <img src="IMAGES/logo.jpg" class="logo">
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
             <ul class="nav-links">
                 <li><a href="#products">PRODUCTS</a></li>
                 <li><a href="#about">ABOUT</a></li>
@@ -37,10 +38,10 @@
         <h2>OUR PRODUCTS</h2>
         <div class="feature-list">
             <div class="feature">
-                <img src="IMAGES/livestock.jpg" width="500"; height="280px">
+                <img src="IMAGES/sheep.jpg" width="500"; height="280px">
                 <h3>LIVESTOCK MANAGEMENT</h3>
                 <p>Make smarter decisions with AI-powered analytics.</p>
-        </div>
+            </div>
             <div class="feature">
                 <img src="IMAGES/grapes.jpg" width="500"; height="280px">
                 <h3>CROP MANAGEMENT</h3>
@@ -83,5 +84,7 @@
             </P2>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
