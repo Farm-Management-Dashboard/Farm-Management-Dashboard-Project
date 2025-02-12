@@ -1,233 +1,434 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
-    width: 100%;
+  width: 100%;
 }
 
 /* NavBar */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1rem;
-    background-color: white;
-    position: relative;
-    box-shadow:5px 0px 5px #21d62d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: white;
+  position: relative;
+  box-shadow: 5px 0px 5px #21d62d;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
 }
 
 .nav-links li a {
-    color: rgb(4, 44, 9);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
+  color: rgb(4, 44, 9);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
 }
+
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: rgb(80, 219, 52);
+  color: rgb(80, 219, 52);
 }
-.logo{
-    width: 100px;
-    height: 65px;
+
+.logo {
+  width: 100px;
+  height: 65px;
 }
 .menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: rgb(4, 44, 9);
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(4, 44, 9);
 }
 
 /* Hero Section */
 .hero {
-    background-image: url(IMAGES/back3.jpg);
-    position: relative;
-    height: 80vh;
-    width:auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    padding: 20px;
+  background-image: url(IMAGES/back3.jpg);
+  position: relative;
+  height: 80vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 20px;
 }
+
 .btn {
-    background-color: #1c9524;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: rgb(250, 245, 245);
+  background-color: #1c9524;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: rgb(250, 245, 245);
 }
-.btn:hover{
-background-color: rgb(7, 68, 31);
-color: rgb(255, 255, 255);
+
+.btn:hover {
+  background-color: rgb(7, 68, 31);
+  color: rgb(255, 255, 255);
 }
+
 .text-background {
-    background-color: rgba(244, 240, 242, 0.678);
-    width: auto;
-    height: auto;
-    padding: 2rem;
-    border-radius: 20px;
+  background-color: rgba(244, 240, 242, 0.678);
+  width: auto;
+  height: auto;
+  padding: 2rem;
+  border-radius: 20px;
 }
+
 .hero h1 {
-    font-size: 2.5rem;
-    color: #1c9524;
+  font-size: 2.5rem;
+  color: #1c9524;
 }
-.hero p{
-    font-size: 1rem;
-    color: #052b08;
-    margin-bottom: 2rem; 
+
+.hero p {
+  font-size: 1rem;
+  color: #052b08;
+  margin-bottom: 2rem;
 }
+
 /* Products Section */
 .products {
-    text-align: center;
-    padding: 50px 20px;
-    color: #1c9524;
-    font-size: 20px;
+  text-align: center;
+  padding: 50px 20px;
+  color: #1c9524;
+  font-size: 20px;
 }
 
 .feature-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3rem;
-    padding: 2rem 1rem;
-    background-color: white
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem 1rem;
+  background-color: white;
 }
 
 .feature {
-    width: calc(100% / 3 - 2rem);
-    min-width: 200px;
-    padding: 1rem;
-    border-radius: 15px;
-    cursor: pointer;
-    box-shadow: 6px 6px 10px rgb(38, 85, 6);
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    transition: background-color 0.3s;
+  width: calc(100% / 3 - 2rem);
+  min-width: 200px;
+  padding: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 6px 6px 10px rgb(38, 85, 6);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  transition: background-color 0.3s;
+}
 
-}
 .feature img {
-    width: 80%;
-    border-radius: 15px;
+  width: 80%;
+  border-radius: 15px;
+  object-fit: cover;
 }
-.feature h3{
-    font-size: 20px;
-    color: #052b08;
+
+.feature h3 {
+  font-size: 20px;
+  color: #052b08;
 }
-.feature p{
-    font-size: 15px;
+
+.feature p {
+  font-size: 15px;
 }
+
 /* Call to Action */
 .cta {
-    text-align: center;
-    padding: 40px;
-    background: #066e0e;
-    color: white;
-} 
+  text-align: center;
+  padding: 40px;
+  background: #066e0e;
+  color: white;
+}
 
 .cta button {
-    padding: 10px 20px;
-    border: none;
-    background: white;
-    color: #13761f;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 10px;
-    border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: #13761f;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px;
+  border-radius: 5px;
 }
-.cta button:hover{
-    background-color: rgb(7, 68, 31);
-color: rgb(255, 255, 255);
+
+.cta button:hover {
+  background-color: rgb(7, 68, 31);
+  color: rgb(255, 255, 255);
 }
 
 /* Contact */
 .contact {
-    background-image: url(IMAGES/farm.jpg);
-    padding: 30px;
-    color: white;
-    margin-top: 20px;
-    position: relative;
-    height: 50vh;
-    width:auto;
-    flex-direction: column;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;  
-}
-.contact h2{
-    font-size: 3rem;
-    font-style: italic;
+  background-image: url(IMAGES/farm.jpg);
+  padding: 30px;
+  color: white;
+  margin-top: 20px;
+  position: relative;
+  height: 50vh;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.contact p{
-    font-size: 1.1rem;
+.contact h2 {
+  font-size: 3rem;
+  font-style: italic;
 }
+
+.contact p {
+  font-size: 1.1rem;
+}
+
 /* footer */
 .footer {
-    background-color: #faf6f9;
-    color: #158211;
-    padding: 1rem;
-    text-align: center;
+  background-color: #faf6f9;
+  color: #158211;
+  padding: 1rem;
+  text-align: center;
 }
 
 .footer-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .footer-nav ul li a {
-    text-decoration: none;
-    color: #167119;
-    font-size: 0.7rem;
-    font-weight: 600;
+  text-decoration: none;
+  color: #167119;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .footer-nav ul li a:hover {
-    color: #091a01;
+  color: #091a01;
 }
-p2 {
-    font-size: 10px;
+
+p {
+  font-size: 10px;
+  margin: 0;
+  padding: 10px;
+  color: #066e0d;
+}
+
+
+/* Get Started Dropdown */
+
+.dropdown {
+    position: relative; 
+}
+
+#dropdown-menu {
+    display: none;  
+    position: absolute;
+    background-color: #1c9524;
+    width: 100%;
+    top: 200%;
+    left: 0;   
+    list-style-type: none;
+    padding: 10px;
     margin: 0;
-    padding: 10PX;
-    color: #066e0d;
+    z-index: 1;
 }
+
+.dropdown:hover #dropdown-menu,
+.dropdown:focus-within #dropdown-menu {
+    display: block;  
+}
+
+#dropdown-menu li {
+    padding: 8px 12px;
+}
+
+#dropdown-menu a {
+    color:  rgb(4, 44, 9);
+    text-decoration: none;
+}
+
+#dropdown-menu a:hover, #dropdown-menu a:focus  {
+    background-color: rgb(7, 68, 31);
+  color: rgb(255, 255, 255);
+}
+
+
+/* livestock and crop */
+
+#add-animal,
+#crop {
+  padding: 48px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#add-animal h1,
+#crop h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #4caf50;
+  margin-bottom: 16px;
+}
+
+#add-animal h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #4caf50;
+  margin-bottom: 24px;
+}
+
+#add-animal p,
+#crop p {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 32px;
+}
+
+.livestock-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.livestock-images img {
+  width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.livestock-form,
+.crop-form {
+  background-color: rgba(157, 231, 177, 0.678);
+  box-shadow: 6px 6px 10px rgb(38, 85, 6);
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.livestock-form form,
+.crop-form form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.livestock-form form label,
+.crop-form form label {
+  display: block;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #000;
+}
+
+.livestock-form form select,
+.livestock-form form input,
+.crop-form form select,
+.crop-form form input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.livestock-form button,
+.crop-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 32px;
+  transition: background-color 0.3s ease;
+}
+
+.livestock-form button:hover,
+.crop-form button:hover {
+  background-color: #45a049;
+}
+
 
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 97px;
-        right: 0;
-        background: white;
-        width: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.842);
-        padding: 10px 10px 20px 10px;
-        z-index: 10;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 97px;
+    right: 0;
+    background: white;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.842);
+    padding: 10px 10px 20px 10px;
+    z-index: 10;
+  }
 
-    .nav-links.active {
-        display: flex;
-    }
+  .nav-links.active {
+    display: flex;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  .menu-toggle {
+    display: block;
+  }
+
+  /* home-page */
+  
+  .feature {
+    width: 100%;
+  }
+  
+  .feature img {
+    width: 100%;
+  } 
+  
+  
+  /* livestock and crop */
+  .livestock-images {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .livestock-form,
+.crop-form {
+  width: 100%;
+}
+
+.livestock-form form select,
+.livestock-form form input,
+.crop-form form select,
+.crop-form form input {
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+.livestock-form button,
+.crop-form button {
+  padding: 10px 20px;
+  margin-top: 16px;
+}
+
+
 }
