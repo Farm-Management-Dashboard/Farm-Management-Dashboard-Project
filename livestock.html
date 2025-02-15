@@ -1,101 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Farming Solutions | FarmFlow</title>
     <link rel="shortcut icon" type="images/jpg" href="IMAGES/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 
 </head>
+
 <body>
     <header>
         <nav>
-            <img src="Images/logo.jpg" style="width: 100px; height: 60px;"></img>
+            <img src="IMAGES/logo.jpg" class="logo">
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
             <ul class="nav-links">
                 <li><a href="#products">PRODUCTS</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#cta" class="btn">GET STARTED</a></li>
+                <li class="dropdown"><a href="#" class="btn">GET STARTED</a>
+                    <ul id="dropdown-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="livestock.html">Livestock</a></li>
+                        <li><a href="crop.html">Crop</a></li>
+                    </ul>
+                </li>
             </ul>
-
-     </nav>
-    </header>       
+        </nav>
+    </header>
     <section id="add-animal">
-    <h1>LIVESTOCK MANAGEMENT</h1>
-    
-    <p>Take control of your farm with an easy-to-use livestock management system - track animal records, monitor health status, manage feeding schedules and improve productivity with accurate data.</p>
-    <div>
-        <img src="Images/sheep.jpg" alt="" width="300">
-        <img src="Images/pig.jpg" alt="pig" width="300" height="250">
-    </div>
-    
-    <h2>ANIMAL RECORDS</h2> 
+        <h1>LIVESTOCK MANAGEMENT</h1>
+        <p>Take control of your farm with an easy-to-use livestock management system - track animal records, monitor
+            health status, manage feeding schedules and improve productivity with accurate data.</p>
+        <div class="livestock-images">
+            <img src="IMAGES/sheep.jpg" alt="" width="300">
+            <img src="IMAGES/pig.jpg" alt="pig" width="300" height="250">
+        </div>
 
-    
-    <form action="">
-       <label for="animal">Animal Type :</label>
-       <select name="animal-type" id="" required>
-     <option value="">Select type</option>
-        <optgroup label="Mammals"> 
-        <option value="cow">Cow </option>
-        <option value="Goat">Goat</option>
-        <option value="Ram">Ram</option>
-    </optgroup>
+        <h2>ANIMAL RECORDS</h2>
 
-    <optgroup label="Fish">
-        <option value="catfish">CatFish</option>
-        <option value="Tilapia">Tilapia</option>
-        <option value="mackerel">Mackerel</option>
-       </optgroup>
+        <div class="livestock-form">
+            <form action="">
+                <label for="animal">Animal Type :</label>
+                <select name="animal-type" id="" required>
+                    <option value="">Select type</option>
+                    <optgroup label="Mammals">
+                        <option value="cow">Cow </option>
+                        <option value="Goat">Goat</option>
+                        <option value="Ram">Ram</option>
+                    </optgroup>
+
+                    <optgroup label="Fish">
+                        <option value="catfish">CatFish</option>
+                        <option value="Tilapia">Tilapia</option>
+                        <option value="mackerel">Mackerel</option>
+                    </optgroup>
 
 
-<optgroup label="Birds">
-  <option value="">Chicks</option>
-        <option value="Turkey">Turkey</option>
-        <option value="">Guinea Fowl</option>
-    </optgroup>     </select>  <br>
+                    <optgroup label="Birds"></optgroup>
+                    <option value="">Chicks</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="">Guinea Fowl</option>
+                    </optgroup>
+                </select> <br>
 
-    <label for="">Date of Birth:</label>
-    <input type="date" id="dob" required> <br>
+                <label for="">Date of Birth:</label>
+                <input type="date" id="dob" required> <br>
 
-    <label for="">Health status:</label>
-    <input type="text" placeholder="e.g Good, Bad, Fair etc"> <br>
+                <label for="">Health status:</label>
+                <input type="text" placeholder="e.g Good, Bad, Fair etc"> <br>
 
-    <label for="">Vaccination Status:</label>
-    <select name="" id="">
-        <option value="">Select option</option>
-        <option value="">Up-to-date</option>
-        <option value="">Pending</option>
-    </select> <br>
+                <label for="">Vaccination Status:</label>
+                <select name="" id="">
+                    <option value="">Select option</option>
+                    <option value="">Up-to-date</option>
+                    <option value="">Pending</option>
+                </select> <br>
 
-    <label for="">Production Output:</label>
-<select name="" id="">
-    <option value="">Select option</option>
-        <option value="">Milk</option>
-        <option value="">Egg</option>
-        <option value="">Beef</option>
-        <option value="">Meat</option>
-</select> <br>
+                <label for="">Production Output:</label>
+                <select name="" id="">
+                    <option value="">Select option</option>
+                    <option value="">Milk</option>
+                    <option value="">Egg</option>
+                    <option value="">Beef</option>
+                    <option value="">Meat</option>
+                </select> <br>
 
-<label for="">Feeding Schedule:</label>
-<select name="" id="">
-    <option value="">Select option</option>
-    <option value="">Once daily</option>
-    <option value="">Twice daily</option>
-</select> <br>
-      <button> Add Livestock </button>
-      
-    </form>
-    
+                <label for="">Feeding Schedule:</label>
+                <select name="" id="">
+                    <option value="">Select option</option>
+                    <option value="">Once daily</option>
+                    <option value="">Twice daily</option>
+                </select> <br>
+                <button> Add Livestock </button>
+
+            </form>
+        </div>
+
     </section>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-logo">
                 <img src="IMAGES/logo.jpg" alt=" Company logo" style="width: 50px; 
-                 height: 50PX;"></a>
+                 height: 50px;"></a>
             </div>
 
             <div class="footer-nav">
@@ -103,15 +113,16 @@
                     <li><a href="#products">PRODUCTS</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#cta">GET STARTED</a></li>  
-                  </ul>  
+                    <li><a href="#cta">GET STARTED</a></li>
+                </ul>
             </div>
-    
-            <P2 class="footer-copyright">
+
+            <P class="footer-copyright">
                 &copy; 2025 FarmFlow. All rights reserved.
-            </P2>
+            </P>
         </div>
     </footer>
-
+<script src="script.js"></script>
 </body>
+
 </html>
