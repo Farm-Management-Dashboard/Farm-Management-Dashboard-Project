@@ -1,85 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Farming Solutions | FarmFlow</title>
     <link rel="shortcut icon" type="images/jpg" href="IMAGES/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-
 </head>
+
 <body>
     <header>
-        <nav>
-            <img src="IMAGES/logo.jpg" style="width: 100px; height: 60px;"></img>
-            <ul class="nav-links">
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#cta" class="btn">GET STARTED</a></li>
-            </ul>
-
-     </nav>
-    </header>       
+        <header>
+            <nav>
+                <img src="IMAGES/logo.jpg" class="logo">
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+                <ul class="nav-links">
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li class="dropdown"><a href="#" class="btn">GET STARTED</a>
+                        <ul id="dropdown-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="livestock.html">Livestock</a></li>
+                            <li><a href="crop.html">Crop</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </header>
+    <section id="crop">
     <h1>CROP MANAGEMENT</h1>
-<p> Simplify crop management with an organised system - track planting schedules, growth stages, pesticide treatments, and expected harvest dates for better farm productivity.</p>
+    <p> Simplify crop management with an organised system - track planting schedules, growth stages, pesticide
+        treatments, and expected harvest dates for better farm productivity.</p>
+        <div class="crop-form">
     <form action="">
         <label for="crop-name">Crop name:</label>
         <input type="text" required> <br>
 
         <label for="">Crop type:</label>
         <select name="" id="">
-        <option value="">Select Type</option>
-        <option value="">Grains </option>
-        <option value="">Fruits</option>
-        <option value="">Vegetables</option>
-    </select> <br>
+            <option value="">Select Type</option>
+            <option value="">Grains </option>
+            <option value="">Fruits</option>
+            <option value="">Vegetables</option>
+        </select> <br>
 
-    <label for="">Planted date:</label>
-    <input type="date"> <br>
+        <label for="">Planted date:</label>
+        <input type="date"> <br>
 
-    <label for="">Fertiliser used:</label>
-    <input type="text"> <br>
+        <label for="">Fertiliser used:</label>
+        <input type="text"> <br>
 
 
-    <label for="">Watering Schedule:</label>
-    
-    <select name="" id="">
-        <option value="">Select option</option>
-        <option value="">Daily</option>
-        <option value="">Weekly</option>
-        <option value="">Monthly</option>
-    </select> <br>
+        <label for="">Watering Schedule:</label>
+        <select name="" id="">
+            <option value="">Select option</option>
+            <option value="">Daily</option>
+            <option value="">Weekly</option>
+            <option value="">Monthly</option>
+        </select> <br>
 
-    <label for="">Pesticide Treatment:</label>
-   <select name="" id="">
-    <option value="">Select option</option>
-        <option value="">Monthly</option>
-        <option value="">Quarterly</option>
-        <option value="">Bi-annually</option></optgroup>
-    </select> <br>
+        <label for="">Pesticide Treatment:</label>
+        <select name="" id="">
+            <option value="">Select option</option>
+            <option value="">Monthly</option>
+            <option value="">Quarterly</option>
+            <option value="">Bi-annually</option>
+        </select> <br>
 
-    <label for="">Expected Harvest Date:</label>
-    <input type="date"> <br>
+        <label for="">Expected Harvest Date:</label>
+        <input type="date"> <br>
 
-    <label for="">Planting Stage:</label>
-    <select name="" id="">
-        <option value="">Select option</option>
-        <option value="Seedling">Seedling</option>
-        <option value="">Vegetative</option>
-        <option value="">Harvesting</option>  <br>
-</select> <br>
-    
-<button>Add Crop</button> 
+        <label for="">Planting Stage:</label>
+        <select name="" id="">
+            <option value="">Select option</option>
+            <option value="Seedling">Seedling</option>
+            <option value="">Vegetative</option>
+            <option value="">Harvesting</option> <br>
+        </select> <br>
+
+        <button>Add Crop</button>
 
     </form>
+</div>
+</section>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-logo">
                 <img src="IMAGES/logo.jpg" alt=" Company logo" style="width: 50px; 
-                 height: 50PX;"></a>
+                 height: 50px;"></a>
             </div>
 
             <div class="footer-nav">
@@ -87,15 +100,16 @@
                     <li><a href="#products">PRODUCTS</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#cta">GET STARTED</a></li>  
-                  </ul>  
+                    <li><a href="#cta">GET STARTED</a></li>
+                </ul>
             </div>
-    
-            <P2 class="footer-copyright">
+
+            <P class="footer-copyright">
                 &copy; 2025 FarmFlow. All rights reserved.
-            </P2>
+            </P>
         </div>
     </footer>
-
+<script src="script.js"></script>
 </body>
+
 </html>
