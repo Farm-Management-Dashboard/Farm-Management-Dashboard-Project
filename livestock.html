@@ -42,60 +42,60 @@
         <h2>ANIMAL RECORDS</h2>
 
         <div class="livestock-form">
-            <form action="">
+
+            <form action="" id="livestockForm">
                 <label for="animal">Animal Type :</label>
-                <select name="animal-type" id="" required>
+                <select name="animal-type" id="animalType" required>
                     <option value="">Select type</option>
                     <optgroup label="Mammals">
-                        <option value="cow">Cow </option>
+                        <option value="Cow">Cow </option>
                         <option value="Goat">Goat</option>
                         <option value="Ram">Ram</option>
                     </optgroup>
-
+    
                     <optgroup label="Fish">
-                        <option value="catfish">CatFish</option>
+                        <option value="Catfish">CatFish</option>
                         <option value="Tilapia">Tilapia</option>
-                        <option value="mackerel">Mackerel</option>
+                        <option value="Mackerel">Mackerel</option>
                     </optgroup>
-
-
+    
+    
                     <optgroup label="Birds"></optgroup>
-                    <option value="">Chicks</option>
+                    <option value="Chicks">Chicks</option>
                     <option value="Turkey">Turkey</option>
-                    <option value="">Guinea Fowl</option>
+                    <option value="Guinea Fowl">Guinea Fowl</option>
                     </optgroup>
                 </select> <br>
-
+    
                 <label for="">Date of Birth:</label>
                 <input type="date" id="dob" required> <br>
-
+    
                 <label for="">Health status:</label>
                 <input type="text" placeholder="e.g Good, Bad, Fair etc"> <br>
-
                 <label for="">Vaccination Status:</label>
-                <select name="" id="">
-                    <option value="">Select option</option>
-                    <option value="">Up-to-date</option>
-                    <option value="">Pending</option>
+                <select name="" id="vaccinationStatus">
+                    <option value="Select option">Select option</option>
+                    <option value="Up-to-date">Up-to-date</option>
+                    <option value="Pending">Pending</option>
                 </select> <br>
-
+    
                 <label for="">Production Output:</label>
-                <select name="" id="">
-                    <option value="">Select option</option>
-                    <option value="">Milk</option>
-                    <option value="">Egg</option>
-                    <option value="">Beef</option>
-                    <option value="">Meat</option>
+                <select name="" id="productionOutput">
+                    <option value="Select">Select option</option>
+                    <option value="Milk">Milk</option>
+                    <option value="Egg">Egg</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Meat">Meat</option>
                 </select> <br>
-
-                <label for="">Feeding Schedule:</label>
-                <select name="" id="">
-                    <option value="">Select option</option>
-                    <option value="">Once daily</option>
-                    <option value="">Twice daily</option>
+    
+                <label for="feedingSchedule">Feeding Schedule:</label>
+                <select name="feedingSchedule" id="feedingSchedule">
+                    <option value="Select option">Select Option</option>
+                    <option value="Once Daily">Once Daily</option>
+                    <option value="Twice Daily">Twice Daily</option>
                 </select> <br>
-                <button> Add Livestock </button>
-
+                <button type="submit"> Add Livestock </button>
+    
             </form>
         </div>
 
@@ -122,7 +122,7 @@
             </P>
         </div>
     </footer>
-<script src="script.js"></script>
+<script src="livestock.js"></script>
 </body>
 
 </html>

@@ -38,51 +38,51 @@
         <div class="crop-form">
     <form action="">
         <label for="crop-name">Crop name:</label>
-        <input type="text" required> <br>
+        <input type="text" name="crop-name" id="crop-name" required> <br>
 
         <label for="">Crop type:</label>
         <select name="" id="">
-            <option value="">Select Type</option>
-            <option value="">Grains </option>
-            <option value="">Fruits</option>
-            <option value="">Vegetables</option>
+            <option value="Select Type">Select Type</option>
+            <option value="Grains">Grains </option>
+            <option value="Fruits">Fruits</option>
+            <option value="Vegetables">Vegetables</option>
         </select> <br>
 
-        <label for="">Planted date:</label>
-        <input type="date"> <br>
+        <label for="planted">Planted date:</label>
+        <input type="date" name="planted" id="planted"> <br>
 
-        <label for="">Fertiliser used:</label>
-        <input type="text"> <br>
+        <label for="fertilizer">Fertiliser used:</label>
+        <input type="text" name="fertilizer" id="fertilizer"> <br>
 
 
         <label for="">Watering Schedule:</label>
         <select name="" id="">
-            <option value="">Select option</option>
-            <option value="">Daily</option>
-            <option value="">Weekly</option>
-            <option value="">Monthly</option>
+            <option value="Select Option">Select option</option>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
         </select> <br>
 
         <label for="">Pesticide Treatment:</label>
         <select name="" id="">
-            <option value="">Select option</option>
-            <option value="">Monthly</option>
-            <option value="">Quarterly</option>
-            <option value="">Bi-annually</option>
+            <option value="Select Option">Select option</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Quarterly">Quarterly</option>
+            <option value="Bi-annually">Bi-annually</option>
         </select> <br>
 
-        <label for="">Expected Harvest Date:</label>
-        <input type="date"> <br>
+        <label for="date">Expected Harvest Date:</label>
+        <input type="date" name="date" id="date"> <br>
 
-        <label for="">Planting Stage:</label>
-        <select name="" id="">
-            <option value="">Select option</option>
+        <label for="stage">Planting Stage:</label>
+        <select name="stage" id="stage">
+            <option value="Select Option">Select option</option>
             <option value="Seedling">Seedling</option>
-            <option value="">Vegetative</option>
-            <option value="">Harvesting</option> <br>
+            <option value="Vegetative">Vegetative</option>
+            <option value="Harvesting">Harvesting</option> <br>
         </select> <br>
 
-        <button>Add Crop</button>
+        <button type="submit">Add Crop</button>
 
     </form>
 </div>
@@ -109,7 +109,7 @@
             </P>
         </div>
     </footer>
-<script src="script.js"></script>
+<script src="crop.js"></script>
 </body>
 
 </html>
