@@ -6,14 +6,24 @@
     <title>Smart Farming Solutions | FarmFlow</title>
     <link rel="shortcut icon" type="images/jpg" href="IMAGES/logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+
+<script defer src="script.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+
     <!----------Nav Bar------------------------>
     <header>
         <nav>
-            <img src="IMAGES/logo.jpg" class="logo">
-            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <img src="IMAGES/fmd.png" class="logo">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#products">PRODUCTS</a></li>
                 <li><a href="#about">ABOUT</a></li>
@@ -35,9 +45,36 @@
         <h1>Transform Your Farming </h1>
         <h1> Smart Solutions</h1>
         <p>Optimize your farm management with cutting-edge technology.</p>
-        <a href="#cta" class="btn">Get Started</a>
+        <a href="#cta" class="btn">Get Started</a> 
     </div>
-    </section>
+</section>
+
+<section id="about" class="about-section">
+    <div class="about-content">
+        <h2>About Us</h2>
+        <p>Our journey began with a vision to revolutionize farm management through technology. We recognized the challenges farmers face in tracking their crops and livestock, and we set out to create a simple yet effective solution.</p>
+
+        <p>Our <strong>Farm Management Dashboard</strong> empowers farmers by providing essential tools, including:</p>
+        <ul>
+            <li>Tracking crop and livestock growth</li>
+            <li>Recording planting and harvest dates</li>
+            <li>Monitoring productivity with real-time analytics</li>
+            <li>Generating detailed reports for better decision-making</li>
+        </ul>
+
+        <p>Whether you’re a <strong>farmer, agricultural researcher, or agribusiness owner</strong>, our platform is designed to help you <strong>streamline operations and increase efficiency</strong>.</p>
+
+        <a href="about.html" class="btn">Learn More</a>
+    </div>
+
+    <div class="about-video" >
+        <video controls autoplay muted>
+            <source src="IMAGES/1063309489-preview.mp4" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
     
 <!-----------------Little Intro for the Products-------------->    
     <section id="products" class="products">
@@ -46,12 +83,14 @@
             <div class="feature">
                 <img src="IMAGES/sheep.jpg" width="500"; height="280px">
                 <h3>LIVESTOCK MANAGEMENT</h3>
-                <p>Make smarter decisions with AI-powered analytics.</p>
+                <p>Make smarter decisions with our analytics.</p>
+                <p>Track the health, nutrition, and productivity of your livestock in real-time.</p>
             </div>
             <div class="feature">
                 <img src="IMAGES/grapes.jpg" width="500"; height="280px">
                 <h3>CROP MANAGEMENT</h3>
                 <p>Monitor your crops in real-time.</p>
+                <p>Our crop management system provides data-driven insights on soil health and pest control.</p>
             </div>
         </div>
     </section>
@@ -63,6 +102,7 @@
         <a href="livestock.html"><button type="button">LIVESTOCK</button></a>
         <a href="crop.html"><button type="button">CROP</button></a>
     </section>
+    
     <section id="contact" class="contact">
         <h2>CONTACT US</h2>
         <p>Email: support@farmflow.com</p>
@@ -72,8 +112,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-logo">
-                <img src="IMAGES/logo.jpg" alt=" Company logo" style="width: 50px; 
-                 height: 50px;"></a>
+                <img src="IMAGES/fmd.png" alt=" Company logo" class="logo">
             </div>
 
             <div class="footer-nav">
@@ -91,6 +130,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>

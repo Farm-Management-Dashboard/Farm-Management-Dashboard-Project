@@ -12,21 +12,19 @@
 </head>
 
 <body>
+        
+
+    <!----------Nav Bar------------------------>
     <header>
         <nav>
-            <img src="IMAGES/logo.jpg" class="logo">
-            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <img src="IMAGES/fmd.png" class="logo">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li class="dropdown"><a href="#" class="btn">GET STARTED</a>
-                    <ul id="dropdown-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="livestock.html">Livestock</a></li>
-                        <li><a href="crop.html">Crop</a></li>
-                    </ul>
-                </li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="crop.html">CROPS</a></li>
+                <li><a href="#footer">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -101,19 +99,18 @@
 
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-logo">
-                <img src="IMAGES/logo.jpg" alt=" Company logo" style="width: 50px; 
-                 height: 50px;"></a>
+                <img src="IMAGES/logo.jpg" alt=" Company logo" class="logo"></a>
             </div>
 
             <div class="footer-nav">
                 <ul>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="#products">PRODUCTS</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="#cta">GET STARTED</a></li>
                 </ul>
             </div>
 
@@ -123,6 +120,7 @@
         </div>
     </footer>
 <script src="livestock.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>

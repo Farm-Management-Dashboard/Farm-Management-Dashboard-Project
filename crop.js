@@ -1,4 +1,3 @@
-
 document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
     let cropType = document.querySelector("select").value;
