@@ -310,46 +310,6 @@ p {
   color: #066e0d;
 }
 
-
-/* Get Started Dropdown */
-
-.dropdown {
-    position: relative; 
-}
-
-#dropdown-menu {
-    display: none;  
-    position: absolute;
-    background-color: #1c9524;
-    width: 100%;
-    top: 200%;
-    left: 0;   
-    list-style-type: none;
-    padding: 10px;
-    margin: 0;
-    z-index: 1;
-}
-
-.dropdown:hover #dropdown-menu,
-.dropdown:focus-within #dropdown-menu {
-    display: block;  
-}
-
-#dropdown-menu li {
-    padding: 8px 12px;
-}
-
-#dropdown-menu a {
-    color:  rgb(4, 44, 9);
-    text-decoration: none;
-}
-
-#dropdown-menu a:hover, #dropdown-menu a:focus  {
-    background-color: rgb(7, 68, 31);
-  color: rgb(255, 255, 255);
-}
-
-
 /* livestock and crop */
 
 #add-animal,
