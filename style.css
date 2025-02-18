@@ -279,6 +279,7 @@ nav {
 /* footer */
 .footer {
   background-color: white;
+  box-shadow: 5px 0px 5px #21d62d;
   color: #158211;
   padding: 1rem;
   text-align: center;
