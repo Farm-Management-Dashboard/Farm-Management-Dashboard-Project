@@ -93,7 +93,7 @@ nav {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #1c9524;
 }
 
@@ -101,17 +101,6 @@ nav {
   font-size: 1rem;
   color: #052b08;
   margin-bottom: 2rem;
-}
-.flower-container {
-  position: absolute;
-  top: 10vh;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.flower {
-  width: 25px;
-  transition: transform 0.2s ease;
 }
 
 /* About Section */
@@ -132,6 +121,7 @@ nav {
 .about-content h2 {
   color: #156c23;
   margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 .about-content p {
   color: #555;
