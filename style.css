@@ -100,7 +100,8 @@ nav {
 .hero p {
   font-size: 1rem;
   color: #052b08;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* About Section */
@@ -110,6 +111,7 @@ nav {
   justify-content: space-between;
   gap: 20px;
   padding: 50px;
+flex-wrap: wrap;
   background: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
