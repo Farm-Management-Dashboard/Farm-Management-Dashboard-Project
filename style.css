@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* NavBar */
 nav {
   display: flex;
@@ -12,11 +13,12 @@ nav {
   background-color: white;
   position: relative;
   box-shadow: 5px 0px 5px #020f0345;
+  transition: background-color 0.3s ease-in-out;
 }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.3rem;
+  gap: 1.5em;
   list-style: none;
 }
 .nav-links li a {
@@ -40,10 +42,11 @@ nav {
   border: none;
   cursor: pointer;
   color: rgb(4, 44, 9);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, color 0.3s ease-in-out;
 }
 .menu-toggle:hover{
   transform: scale(1.1);
+  color: rgb(229, 134, 33);
 }
 
 /* FontAwesome Closing icon */
@@ -51,6 +54,7 @@ nav {
   content: "\f00d"; 
   font-size: 28px;
   color: rgb(229, 134, 33);
+  transition: color 0.3s ease-in-out;
 }
 
 /* Hero Section */
@@ -76,14 +80,12 @@ nav {
   font-weight: bold;
   color: rgb(250, 245, 245);
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.3s ease-in;
 }
-
 .btn:hover {
   background-color: rgb(7, 68, 31);
   color: rgb(255, 255, 255);
 }
-
 .text-background {
   background-color: rgba(244, 240, 242, 0.678);
   width: auto;
@@ -91,14 +93,12 @@ nav {
   padding: 2rem;
   border-radius: 20px;
 }
-
 .hero h1 {
-  font-size: 1.67rem;
+  font-size: 2rem;
   color: #1c9524;
 }
-
 .hero p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #052b08;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -122,7 +122,7 @@ nav {
 .about-content h2 {
   color: #156c23;
   margin-bottom: 15px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .about-content p {
   color: #555;
@@ -166,7 +166,6 @@ nav {
   color: #1c9524;
   font-size: 20px;
 }
-
 .feature-list {
   display: flex;
   justify-content: center;
@@ -175,14 +174,13 @@ nav {
   padding: 2rem 1rem;
   background-color: white;
 }
-
 .feature {
   width: calc(100% / 3 - 1rem);
   min-width: 200px;
   padding: 1rem;
   border-radius: 15px;
   cursor: pointer;
-  box-shadow: 6px 6px 10px rgba(38, 85, 6, 0.183);
+  box-shadow: 1px 2px 10px rgba(38, 85, 6, 0.235);
   background-color: rgb(255, 255, 255);
   text-align: center;
   transition: transform 0.3s ease-in-out;
@@ -190,28 +188,26 @@ nav {
 .feature:hover {
   transform: scale(1.03);
 }
-
 .feature img {
   width: 80%;
   border-radius: 15px;
   object-fit: cover;
 }
-
 .feature h3 {
-  font-size: 22px;
+  font-size: 20px;
   margin: 10px 0;
-  color: #052b08;
+  color: #177a1e;
 }
-
 .feature p {
-  font-size: 15px;
+  font-size: 16px;
+  color: #000;
 }
 
 /* Call to Action */
 .cta {
   text-align: center;
   padding: 40px;
-  background: linear-gradient(135deg, #06690e, #0a8c1a, #06690e);
+  background: linear-gradient(135deg, #06610d, #0a8c1a, #06610d);
   color: white;
 }
 .cta button {
@@ -257,8 +253,13 @@ nav {
   z-index: 2;
 }
 .contact h2 {
-  font-size: 1.32rem;
+  font-size: 1.5rem;
   text-align: center;
+  margin: 10px 0;
+}
+.contact h3{
+  font-size: 1.2rem;
+  color: #54b857;
   margin: 10px 0;
 }
 .contact p {
@@ -320,7 +321,6 @@ nav {
 }
 
 /* livestock and crop */
-
 #add-animal,
 #crop {
   padding: 48px;
@@ -330,14 +330,14 @@ nav {
 
 #add-animal h1,
 #crop h1 {
-  font-size: 1.65rem;
+  font-size: 2.5rem;
   font-weight: 900;
   color: #4caf50;
   margin-bottom: 16px;
 }
 
 #add-animal h2 {
-  font-size: 1.32rem;
+  font-size: 2rem;
   font-weight: 900;
   color: #4caf50;
   margin-bottom: 24px;
@@ -345,7 +345,7 @@ nav {
 
 #add-animal p,
 #crop p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #000;
   margin-bottom: 32px;
 }
@@ -417,6 +417,34 @@ nav {
   background-color: #45a049;
 }
 
+/* Back to Top Button */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #45a049; 
+  transform: scale(1.1);
+}
+
+#backToTop:active {
+  background-color: #3d8b40;
+  transform: scale(0.95);
+}
 
 @media (max-width: 768px) {
   .nav-links {

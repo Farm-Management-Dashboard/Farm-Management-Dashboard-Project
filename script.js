@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Ensure GSAP and ScrollTrigger are registered
   if (typeof gsap !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -56,9 +55,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (menuToggle && navLinks) {
       menuToggle.addEventListener("click", function () {
-          navLinks.classList.toggle("active"); // Show/hide menu
-          menuToggle.classList.toggle("active"); // Change icon
+          navLinks.classList.toggle("active"); 
+          menuToggle.classList.toggle("active");
       });
   } else {
       console.error("Menu elements not found!");
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.getElementById("backToTop");
+  
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 500) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    });
+  
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth" 
+      });
+    });
+  });

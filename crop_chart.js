@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tableBody = document.getElementById("cropTableBody");
     let cropRecords = JSON.parse(localStorage.getItem("cropRecords")) || [];
 
-    console.log("Loaded crop records:", cropRecords); // Debugging line
+    console.log("Loaded crop records:", cropRecords);
 
     function updateTable() {
         tableBody.innerHTML = "";

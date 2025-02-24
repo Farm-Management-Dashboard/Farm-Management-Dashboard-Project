@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent page reload
-
-        // Retrieve existing crop records or initialize an empty array
         let cropRecords = JSON.parse(localStorage.getItem("cropRecords")) || [];
 
         // Create a new record object from the form data
@@ -19,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             plantingStage: document.getElementById("plantingStage").value.trim() || "N/A",
         };
 
-        console.log("Saving record:", newRecord); // Debugging line
+        console.log("Saving record:", newRecord);
 
         // Save the new record to cropRecords
         cropRecords.push(newRecord);
@@ -27,13 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Update cropData for the chart
         let storedData = JSON.parse(localStorage.getItem("cropData")) || {};
-        let cropType = newRecord.cropType; // Get the crop type from the new record
+        let cropType = newRecord.cropType;
         if (cropType) {
             storedData[cropType] = (storedData[cropType] || 0) + 1;
             localStorage.setItem("cropData", JSON.stringify(storedData));
         }
-
-        // Reset the form and redirect to the chart page
         form.reset();
         window.location.href = "crop_chart.html";
     });

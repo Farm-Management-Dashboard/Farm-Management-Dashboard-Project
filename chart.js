@@ -1,46 +1,68 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const tableBody = document.getElementById("livestockTableBody");
-    const downloadBtn = document.getElementById("downloadCSV");
-
+// Global functions for CRUD operations
+function editRecord(index) {
     let livestockRecords = JSON.parse(localStorage.getItem("livestockRecords")) || [];
+    let record = livestockRecords[index];
+    let newAnimalType = prompt("Enter new Animal Type", record.animalType);
+    let newDob = prompt("Enter new Date of Birth", record.dob);
+    let newHealthStatus = prompt("Enter new Health Status", record.healthStatus);
+    let newVaccinationStatus = prompt("Enter new Vaccination Status", record.vaccinationStatus);
+    let newProductionOutput = prompt("Enter new Production Output", record.productionOutput);
+    let newFeedingSchedule = prompt("Enter new Feeding Schedule", record.feedingSchedule);
 
-    function updateTable() {
-        tableBody.innerHTML = "";
-
-        if (window.innerWidth > 768) {
-            // Standard Table Format for Larger Screens
-            livestockRecords.forEach((record, index) => {
-                let row = `<tr>
-                    <td>${index + 1}</td>
-                    <td>${record.animalType}</td>
-                    <td>${record.dob}</td>
-                    <td>${record.healthStatus}</td>
-                    <td>${record.vaccinationStatus}</td>
-                    <td>${record.productionOutput}</td>
-                    <td>${record.feedingSchedule}</td>
-                </tr>`;
-                tableBody.innerHTML += row;
-            });
-        } else {
-            // Stacked Format for Mobile Screens
-            livestockRecords.forEach((record, index) => {
-                let row = `
-                <tr>
-                    <th rowspan="7">Record ${index + 1}</th>
-                </tr>
-                <tr><th>Animal Type</th><td>${record.animalType}</td></tr>
-                <tr><th>Date of Birth</th><td>${record.dob}</td></tr>
-                <tr><th>Health Status</th><td>${record.healthStatus}</td></tr>
-                <tr><th>Vaccination Status</th><td>${record.vaccinationStatus}</td></tr>
-                <tr><th>Production Output</th><td>${record.productionOutput}</td></tr>
-                <tr><th>Feeding Schedule</th><td>${record.feedingSchedule}</td></tr>
-                `;
-                tableBody.innerHTML += row;
-            });
-        }
+    if (newAnimalType && newDob && newHealthStatus && newVaccinationStatus && newProductionOutput && newFeedingSchedule) {
+        livestockRecords[index] = {
+            animalType: newAnimalType,
+            dob: newDob,
+            healthStatus: newHealthStatus,
+            vaccinationStatus: newVaccinationStatus,
+            productionOutput: newProductionOutput,
+            feedingSchedule: newFeedingSchedule
+        };
+        localStorage.setItem("livestockRecords", JSON.stringify(livestockRecords));
+        updateTable();
     }
+}
 
+function deleteRecord(index) {
+    let livestockRecords = JSON.parse(localStorage.getItem("livestockRecords")) || [];
+    if (confirm("Are you sure you want to delete this record?")) {
+        livestockRecords.splice(index, 1);
+        localStorage.setItem("livestockRecords", JSON.stringify(livestockRecords));
+        updateTable();
+    }
+}
+
+// Function to update the table
+function updateTable() {
+    const tableBody = document.getElementById("livestockTableBody");
+    let livestockRecords = JSON.parse(localStorage.getItem("livestockRecords")) || [];
+    tableBody.innerHTML = "";
+
+    livestockRecords.forEach((record, index) => {
+        let row = `<tr>
+            <td>${index + 1}</td>
+            <td>${record.animalType}</td>
+            <td>${record.dob}</td>
+            <td>${record.healthStatus}</td>
+            <td>${record.vaccinationStatus}</td>
+            <td>${record.productionOutput}</td>
+            <td>${record.feedingSchedule}</td>
+            <td>
+                <button class="edit-btn" onclick="editRecord(${index})">Edit</button>
+                <button class="delete-btn" onclick="deleteRecord(${index})">Delete</button>
+            </td>
+        </tr>`;
+        tableBody.innerHTML += row;
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const downloadBtn = document.getElementById("downloadCSV");
+    updateTable();
+
+    // Download CSV 
     function downloadCSV() {
+        let livestockRecords = JSON.parse(localStorage.getItem("livestockRecords")) || [];
         let csvContent = "data:text/csv;charset=utf-8,";
         csvContent += "S/N,Animal Type,Date of Birth,Health Status,Vaccination Status,Production Output,Feeding Schedule\n";
 
@@ -58,14 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     downloadBtn.addEventListener("click", downloadCSV);
-    updateTable();
-
-    // Listen for screen resize to update the table accordingly
     window.addEventListener("resize", updateTable);
 });
 
-
-
+// Bar Chart
 document.addEventListener("DOMContentLoaded", function () {
     const ctx = document.getElementById("animalChart").getContext("2d");
 
