@@ -3,21 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Livestock Chart</title>
+    <link rel="shortcut icon" type="images/jpg" href="IMAGES/fmd.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>Livestock Production Overview</h1>
-    <p>This chart displays the number of livestock categorized by their production output (e.g., Milk, Meat, Eggs). It provides an insight into livestock contributions.</p>
+     <!----------Nav Bar------------------------>
+     <header>
+        <nav>
+            <img src="IMAGES/fmd.png" class="logo">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="crop.html">CROPS</a></li>
+                <li><a href="#footer">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div id="chartContainer">
-        <canvas id="animalChart"></canvas>
-    </div>
-
-    <br>
-    <a href="livestock.html" class="btn">Back to Livestock Form</a>
+    <section class="all">
+        <section id="livestock-records">
+            <h1>Livestock Records</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Animal Type</th>
+                            <th>Date of Birth</th>
+                            <th>Health Status</th>
+                            <th>Vaccination Status</th>
+                            <th>Production Output</th>
+                            <th>Feeding Schedule</th>
+                        </tr>
+                    </thead>
+                    <tbody id="livestockTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <button id="downloadCSV">Download CSV</button>
+        </section>
     
+        <div class="chart">
+    
+            <h1>Livestock Production Overview</h1>
+            <p>This chart displays the number of livestock categorized by their production output (e.g., Milk, Meat, Eggs). It provides an insight into livestock contributions.</p>
+        
+            <div id="chartContainer">
+                <canvas id="animalChart"></canvas>
+            </div>
+        
+            <br>
+            <a href="livestock.html" class="btn">Back to Livestock Form</a>
+        </div>
+        
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="IMAGES/fmd.png" alt=" Company logo" class="logo">
+            </div>
+
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#cta">GET STARTED</a></li>  
+                  </ul>  
+            </div>
+    
+            <P class="footer-copyright">
+                &copy; 2025 FarmFlow. All rights reserved.
+            </P>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
     <script src="chart.js"></script>
 </body>
 </html>

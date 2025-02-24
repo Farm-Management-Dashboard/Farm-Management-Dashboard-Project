@@ -2,43 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-body {
-  width: 100%;
-}
-
 /* NavBar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1.5rem;
   background-color: white;
   position: relative;
-  box-shadow: 5px 0px 5px #21d62d;
+  box-shadow: 5px 0px 5px #020f0345;
 }
-
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.3rem;
   list-style: none;
 }
-
 .nav-links li a {
   color: rgb(4, 44, 9);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
+  transition: color 0.5s ease;
 }
-
 .nav-links li a:hover,
 .nav-links li a.active {
   color: rgb(80, 219, 52);
 }
-
 .logo {
   width: 100px;
 }
@@ -49,12 +40,13 @@ nav {
   border: none;
   cursor: pointer;
   color: rgb(4, 44, 9);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .menu-toggle:hover{
   transform: scale(1.1);
 }
-/* FontAwesome 'X' icon */
+
+/* FontAwesome Closing icon */
 .menu-toggle.active i::before {
   content: "\f00d"; 
   font-size: 28px;
@@ -64,7 +56,6 @@ nav {
 /* Hero Section */
 .hero {
   background-image: url(IMAGES/back3.jpg);
-  position: relative;
   height: 80vh;
   width: auto;
   display: flex;
@@ -76,8 +67,7 @@ nav {
   text-align: center;
   padding: 20px;
 }
-
- .btn { 
+.btn { 
   display: inline-block;
   background-color: #1c9524;
   padding: 10px 20px;
@@ -92,7 +82,7 @@ nav {
 .btn:hover {
   background-color: rgb(7, 68, 31);
   color: rgb(255, 255, 255);
-} 
+}
 
 .text-background {
   background-color: rgba(244, 240, 242, 0.678);
@@ -201,7 +191,7 @@ nav {
   padding: 1rem;
   border-radius: 15px;
   cursor: pointer;
-  box-shadow: 6px 6px 10px rgba(38, 85, 6, 0.582);
+  box-shadow: 6px 6px 10px rgba(38, 85, 6, 0.183);
   background-color: rgb(255, 255, 255);
   text-align: center;
   transition: transform 0.3s ease-in-out;
@@ -218,6 +208,7 @@ nav {
 
 .feature h3 {
   font-size: 20px;
+  margin: 10px 0;
   color: #052b08;
 }
 
@@ -229,10 +220,9 @@ nav {
 .cta {
   text-align: center;
   padding: 40px;
-  background: #066e0e;
+  background: linear-gradient(135deg, #06690e, #0a8c1a, #06690e);
   color: white;
 }
-
 .cta button {
   padding: 10px 20px;
   border: none;
@@ -242,69 +232,97 @@ nav {
   font-weight: 600;
   margin: 10px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
-
 .cta button:hover {
   background-color: rgb(7, 68, 31);
   color: rgb(255, 255, 255);
+  transform: scale(1.05);
 }
-
 /* Contact */
 .contact {
-  background-image: url(IMAGES/farm.jpg);
+  background-image: url("IMAGES/farm.jpg");
   padding: 30px;
   color: white;
-  margin-top: 20px;
-  position: relative;
-  height: 50vh;
-  width: auto;
-  flex-direction: column;
-  justify-content: center;
+  text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
-
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.contact h2, .contact h3,
+.contact p, .contact-form, .social-links, iframe{
+  position: relative;
+  z-index: 2;
+}
 .contact h2 {
   font-size: 3rem;
-  font-style: italic;
+  text-align: center;
+  margin: 10px 0;
 }
-
 .contact p {
   font-size: 1.1rem;
   color: white;
-  text-shadow: 3px 2px 5px black;
+  margin: 10px 0;
+}
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: #6dde71;
+}
+.map {
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
 }
 
 
 /* footer */
 .footer {
   background-color: white;
-  box-shadow: 5px 0px 5px #21d62d;
-  color: #158211;
+  color: #0f640c;
   padding: 1rem;
   text-align: center;
 }
-
 .footer-nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-
 .footer-nav ul li a {
   text-decoration: none;
   color: #167119;
-  font-size: 0.7rem;
+  font-size: 14.6px;
   font-weight: 600;
 }
-
 .footer-nav ul li a:hover {
   color: #091a01;
 }
-
-p {
-  font-size: 10px;
+.footer p { 
+  font-size: 14px;
   margin: 0;
   padding: 10px;
   color: #066e0d;
@@ -345,32 +363,29 @@ p {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
-
 .livestock-images img {
   width: 300px;
   border-radius: 8px;
   object-fit: cover;
+  border: 3px solid rgb(4, 49, 4);
 }
-
 .livestock-form,
 .crop-form {
   background-color: rgba(157, 231, 177, 0.678);
-  box-shadow: 6px 6px 10px rgb(38, 85, 6);
+  box-shadow: 3px 3px 7px rgba(41, 92, 7, 0.523);
   width: 60%;
   margin: 0 auto;
   padding: 20px;
   border-radius: 12px;
 }
-
 .livestock-form form,
 .crop-form form {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
 }
-
 .livestock-form form label,
 .crop-form form label {
   display: block;
@@ -378,7 +393,6 @@ p {
   margin-top: 1rem;
   color: #000;
 }
-
 .livestock-form form select,
 .livestock-form form input,
 .crop-form form select,
@@ -398,11 +412,12 @@ p {
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 16px 32px;
-  font-size: 1.2rem;
+  padding: 10px 5px;
+  font-size: 16px;
+  width: 160px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 32px;
+  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
@@ -416,13 +431,12 @@ p {
   .nav-links {
     display: none;
     flex-direction: column;
-    /* align-items: center; */
     position: absolute;
-    top: 97px;
+    top: 90px;
     right: 0;
     background: white;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.842);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.557);
     padding: 10px 10px 20px 10px;
     z-index: 10;
   }
@@ -465,35 +479,31 @@ p {
     width: 100%;
   } 
   
-  
   /* livestock and crop */
   .livestock-images {
-    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
     margin-bottom: 60px;
   }
-
+  .livestock-images img{
+    width: 100%;
+  }
   .livestock-form,
-.crop-form {
-  width: 100%;
-}
-
-.livestock-form form select,
-.livestock-form form input,
-.crop-form form select,
-.crop-form form input {
-  padding: 10px;
-  font-size: 0.8rem;
-}
-
-.livestock-form button,
-.crop-form button {
-  padding: 10px 20px;
-  margin-top: 16px;
-}
-
-
+  .crop-form {
+    width: 100%;
+  }
+  .livestock-form form select,
+  .livestock-form form input,
+  .crop-form form select,
+  .crop-form form input {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+  .livestock-form button,
+  .crop-form button {
+    padding: 10px 20px;
+    margin-top: 16px;
+    font-size: 16px;
+  }
 }

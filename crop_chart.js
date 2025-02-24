@@ -1,4 +1,79 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const tableBody = document.getElementById("cropTableBody");
+    let cropRecords = JSON.parse(localStorage.getItem("cropRecords")) || [];
+
+    console.log("Loaded crop records:", cropRecords); // Debugging line
+
+    function updateTable() {
+        tableBody.innerHTML = "";
+
+        if (cropRecords.length === 0) {
+            tableBody.innerHTML = `<tr><td colspan="10">No crop records found.</td></tr>`;
+            return;
+        }
+
+        cropRecords.forEach((record, index) => {
+            let row = `<tr>
+                <td>${index + 1}</td>
+                <td>${record.cropName || "N/A"}</td>
+                <td>${record.cropType || "N/A"}</td>
+                <td>${record.plantedDate || "N/A"}</td>
+                <td>${record.fertilizer || "N/A"}</td>
+                <td>${record.wateringSchedule || "N/A"}</td>
+                <td>${record.pesticideTreatment || "N/A"}</td>
+                <td>${record.harvestDate || "N/A"}</td>
+                <td>${record.plantingStage || "N/A"}</td>
+            </tr>`;
+            tableBody.innerHTML += row;
+        });
+    }
+
+    updateTable();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const downloadButton = document.getElementById("downloadCSV");
+
+    if (downloadButton) {
+        downloadButton.addEventListener("click", function () {
+            let cropRecords = JSON.parse(localStorage.getItem("cropRecords")) || [];
+
+            if (cropRecords.length === 0) {
+                alert("No crop records available to download.");
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += "S/N,Crop Name,Crop Type,Planted Date,Fertilizer Used,Watering Schedule,Pesticide Treatment,Expected Harvest Date,Planting Stage\n";
+
+            cropRecords.forEach((record, index) => {
+                let row = [
+                    index + 1,
+                    record.cropName || "N/A",
+                    record.cropType || "N/A",
+                    record.plantedDate || "N/A",
+                    record.fertilizer || "N/A",
+                    record.wateringSchedule || "N/A",
+                    record.pesticideTreatment || "N/A",
+                    record.harvestDate || "N/A",
+                    record.plantingStage || "N/A"
+                ].join(",");
+                csvContent += row + "\n";
+            });
+
+            let encodedUri = encodeURI(csvContent);
+            let link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "crop_records.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const ctx = document.getElementById("cropChart").getContext("2d");
 
     let storedData = JSON.parse(localStorage.getItem("cropData")) || {};

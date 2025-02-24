@@ -4,20 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Chart</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" type="images/jpg" href="IMAGES/fmd.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>Crop Production Overview</h1>
-    <p>This chart represents the count of different crop types recorded in the system. It provides an overview of the types of crops planted.</p>
+    <!----------Nav Bar------------------------>
+    <header>
+        <nav>
+            <img src="IMAGES/fmd.png" class="logo">
 
-    <div id="chartContainer">
-        <canvas id="cropChart"></canvas>
-    </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
 
-    <br>
-    <a href="crop.html" class="btn">Back to Crop Form</a>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="livestock.html">LIVESTOCK</a></li>
+                <li><a href="#footer">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section class="all">
+        <section id="crop-records">
+            <h1>Crop Records</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Crop Name</th>
+                            <th>Crop Type</th>
+                            <th>Planted Date</th>
+                            <th>Fertilizer Used</th>
+                            <th>Watering Schedule</th>
+                            <th>Pesticide Treatment</th>
+                            <th>Expected Harvest Date</th>
+                            <th>Planting Stage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cropTableBody"></tbody>
+                </table>
+            </div>
+            <button id="downloadCSV">Download CSV</button>
+        </section>
+
+    
+        <div class="chart">
+            <h1>Crop Production Overview</h1>
+            <p>This chart represents the count of different crop types recorded in the system. It provides an overview of the types of crops planted.</p>
+    
+            <div id="chartContainer">
+                <canvas id="cropChart"></canvas>
+            </div>
+    
+            <br>
+            <a href="crop.html" class="btn">Back to Crop Form</a>
+        </div>
+
+        
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="IMAGES/fmd.png" alt=" Company logo" class="logo">
+            </div>
+
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#cta">GET STARTED</a></li>  
+                  </ul>  
+            </div>
+    
+            <P class="footer-copyright">
+                &copy; 2025 FarmFlow. All rights reserved.
+            </P>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
     <script src="crop_chart.js"></script>
 </body>
 </html>

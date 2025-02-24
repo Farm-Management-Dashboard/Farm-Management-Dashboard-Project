@@ -17,3 +17,28 @@ document.getElementById("livestockForm").addEventListener("submit", function(eve
         alert("Please select a production output.");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("livestockForm");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let livestockRecords = JSON.parse(localStorage.getItem("livestockRecords")) || [];
+
+        let newRecord = {
+            animalType: document.getElementById("animalType").value,
+            dob: document.getElementById("dob").value,
+            healthStatus: form.elements[2].value,
+            vaccinationStatus: document.getElementById("vaccinationStatus").value,
+            productionOutput: document.getElementById("productionOutput").value,
+            feedingSchedule: document.getElementById("feedingSchedule").value,
+        };
+
+        livestockRecords.push(newRecord);
+        localStorage.setItem("livestockRecords", JSON.stringify(livestockRecords));
+
+        form.reset();
+        window.location.href = "livestock_chart.html"; // Redirect to the records page
+    });
+});
