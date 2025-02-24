@@ -2,6 +2,8 @@ h1{
     font-size: 1.65rem;
     text-align: center;
     margin: 5px 0;
+    font-weight: 900;
+    color: #4caf50;
 }
 p{
     font-size: 1.1rem;
