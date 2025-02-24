@@ -121,7 +121,7 @@ nav {
 .about-content h2 {
   color: #156c23;
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .about-content p {
   color: #555;
@@ -197,7 +197,7 @@ nav {
 }
 
 .feature h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin: 10px 0;
   color: #052b08;
 }
@@ -256,7 +256,7 @@ nav {
   z-index: 2;
 }
 .contact h2 {
-  font-size: 1.2rem;
+  font-size: 1.32rem;
   text-align: center;
   margin: 10px 0;
 }
