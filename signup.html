@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farming Solutions | FarmFlow</title>
+    <link rel="shortcut icon" type="images/jpg" href="IMAGES/fmd.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header>
+        <img src="IMAGES/fmd.png" class="logo">
+    </header>
+    
+    <div class="form-container">
+        <div class="form-box" id="formBox">
+            <h2 id="formTitle">SIGN UP</h2>
+            <form id="authForm">
+                <div class="input-group" id="nameField" style="display: none;">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Full Name" id="fullName">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" id="email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" id="password" required>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="btn">Sign In for Crops</button>
+                    <button type="submit" class="btn">Sign In for Livestock</button>
+                </div>
+                <p id="toggleText">Don't have an account? <a href="#" id="toggleForm">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+            <P class="footer-copyright">
+                &copy; 2025 FarmFlow. All rights reserved.
+            </P>
+        </div>
+    </footer>
+    <script src="signup.js"></script>      
+        </body>
+        </header>

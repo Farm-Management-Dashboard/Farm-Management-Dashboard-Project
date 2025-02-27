@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const tableBody = document.getElementById("cropTableBody");
     let cropRecords = JSON.parse(localStorage.getItem("cropRecords")) || [];
 
-    console.log("Loaded crop records:", cropRecords);
-
     function updateTable() {
         tableBody.innerHTML = "";
 
@@ -23,13 +21,53 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>${record.pesticideTreatment || "N/A"}</td>
                 <td>${record.harvestDate || "N/A"}</td>
                 <td>${record.plantingStage || "N/A"}</td>
+                <td>
+                    <button class="edit-btn" onclick="editCropRecord(${index})">Edit</button>
+                    <button class="delete-btn" onclick="deleteCropRecord(${index})">Delete</button>
+                </td>
             </tr>`;
             tableBody.innerHTML += row;
         });
     }
 
+    window.editCropRecord = function (index) {
+        let record = cropRecords[index];
+        let newCropName = prompt("Enter new Crop Name", record.cropName);
+        let newCropType = prompt("Enter new Crop Type", record.cropType);
+        let newPlantedDate = prompt("Enter new Planted Date", record.plantedDate);
+        let newFertilizer = prompt("Enter new Fertilizer Used", record.fertilizer);
+        let newWateringSchedule = prompt("Enter new Watering Schedule", record.wateringSchedule);
+        let newPesticideTreatment = prompt("Enter new Pesticide Treatment", record.pesticideTreatment);
+        let newHarvestDate = prompt("Enter new Expected Harvest Date", record.harvestDate);
+        let newPlantingStage = prompt("Enter new Planting Stage", record.plantingStage);
+
+        if (newCropName && newCropType && newPlantedDate && newFertilizer && newWateringSchedule && newPesticideTreatment && newHarvestDate && newPlantingStage) {
+            cropRecords[index] = {
+                cropName: newCropName,
+                cropType: newCropType,
+                plantedDate: newPlantedDate,
+                fertilizer: newFertilizer,
+                wateringSchedule: newWateringSchedule,
+                pesticideTreatment: newPesticideTreatment,
+                harvestDate: newHarvestDate,
+                plantingStage: newPlantingStage
+            };
+            localStorage.setItem("cropRecords", JSON.stringify(cropRecords));
+            updateTable();
+        }
+    };
+
+    window.deleteCropRecord = function (index) {
+        if (confirm("Are you sure you want to delete this crop record?")) {
+            cropRecords.splice(index, 1);
+            localStorage.setItem("cropRecords", JSON.stringify(cropRecords));
+            updateTable();
+        }
+    };
+
     updateTable();
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const downloadButton = document.getElementById("downloadCSV");
